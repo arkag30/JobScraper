@@ -1,0 +1,101 @@
+#logo {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+    font-size: 70px;
+    color: #06b491;
+}
+
+/* Style the form */
+form {
+    margin: 20px 0;
+}
+
+footer{
+    font-size: large;
+}
+
+label{
+    font-size: 30px;
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="number"]
+button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="checkbox"]
+button {
+    margin: 5px;
+    padding: 200px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+select{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    font-size: large;
+    background-color: #1e73be;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Style the job listings table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style the table header */
+th {
+    background-color: #1e73be;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Center-align the form */
+form {
+    text-align: center;
+}
+
+/* Center-align the job listings table */
+table {
+    margin-top: 20px;
+    text-align: center;
+}

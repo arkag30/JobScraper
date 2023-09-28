@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Scraper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
+    <h1>Job Scraper</h1>
+    <form method="POST">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br>
+
+        <label for="search_term">Search Term:</label>
+        <input type="text" id="search_term" name="search_term" required><br>
+
+        <label for="hyperlinks">Include Hyperlinks:</label>
+        <input type="checkbox" id="hyperlinks" name="hyperlinks"><br>
+
+        <label for="results_wanted">Results Wanted:</label>
+        <input type="number" id="results_wanted" name="results_wanted" required><br>
+
+        <label for="easy_apply">Easy Apply:</label>
+        <input type="checkbox" id="easy_apply" name="easy_apply"><br>
+
+        <label for="job_type">Job Type:</label>
+        <select id="job_type" name="job_type">
+            <option value="fulltime">Full-Time</option>
+            <option value="parttime">Part-Time</option>
+            <option value="internship">Internship</option>
+            <option value="contract">Contract</option>
+        </select><br>
+
+        <button type="submit">Search</button>
+    </form>
+
+<h2>Job Listings:</h2>
+    {% if job_listings.empty %}
+    <p>No job listings found.</p>
+    {% else %}
+    {{ job_listings | safe }}
+    {% endif %}
+<footer>
+    <p>Made by Arka Ghosh.</p>
+    <p>&copy; 2023 Digital University Kerala</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
